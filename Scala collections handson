@@ -1,0 +1,482 @@
+scala> var s2=seq(10,20,30,40,50)
+<console>:23: error: not found: value seq
+       var s2=seq(10,20,30,40,50)
+              ^
+
+scala> var s2=Seq(10,20,30,40,50)
+s2: Seq[Int] = List(10, 20, 30, 40, 50)
+
+scala> s2(4) =40
+<console>:26: error: value update is not a member of Seq[Int]
+       s2(4) =40
+       ^
+
+scala> s2(4)
+res15: Int = 50
+
+scala> val ar=Array[Float](5)
+ar: Array[Float] = Array(5.0)
+
+scala> val ar=Array[Int](5)
+ar: Array[Int] = Array(5)
+
+scala> ar(0)
+res16: Int = 5
+
+scala> ar[0]
+<console>:1: error: identifier expected but integer literal found.
+ar[0]
+   ^
+
+scala> val ar1=Array91,2,3,4,5)
+<console>:1: error: ';' expected but ',' found.
+val ar1=Array91,2,3,4,5)
+               ^
+
+scala> val ar1=Array(1,2,3,4,5)
+ar1: Array[Int] = Array(1, 2, 3, 4, 5)
+
+scala> val ar1=Array(1,2,3,4,5.5)
+ar1: Array[Double] = Array(1.0, 2.0, 3.0, 4.0, 5.5)
+
+scala> val ar1=Array(1,2,3,4,'a')
+ar1: Array[Int] = Array(1, 2, 3, 4, 97)
+
+scala> val ar1=Array(1,2,3,4,a)
+ar1: Array[Int] = Array(1, 2, 3, 4, 10)
+
+scala> val ar1=Array(1,2,3,4,a,b)
+ar1: Array[Double] = Array(1.0, 2.0, 3.0, 4.0, 10.0, 5.2)
+
+scala> val ar1=Array(1,2,3,4,b)
+ar1: Array[Double] = Array(1.0, 2.0, 3.0, 4.0, 5.2)
+
+scala> val ar1=Array(1,2,3,4,a)
+ar1: Array[Int] = Array(1, 2, 3, 4, 10)
+
+scala> val ar1=Array(1,2,3,4,c)
+ar1: Array[Int] = Array(1, 2, 3, 4, 68)
+
+scala> val ar1=Array(1,2,3,4,c)
+ar1: Array[Int] = Array(1, 2, 3, 4, 68)
+
+scala> ar1(1)
+res17: Int = 2
+
+scala> ar1(0)
+res18: Int = 1
+
+scala> val ar2=range(2,15,2)
+<console>:23: error: not found: value range
+       val ar2=range(2,15,2)
+               ^
+
+scala> val ar2= range(2,15,2)
+<console>:23: error: not found: value range
+       val ar2= range(2,15,2)
+                ^
+
+scala> val ar2= range(2,15,2)
+<console>:23: error: not found: value range
+       val ar2= range(2,15,2)
+                ^
+
+scala> val ar2= Range(2,15,2)
+ar2: scala.collection.immutable.Range = Range(2, 4, 6, 8, 10, 12, 14)
+
+scala> val ar2= Range(1,15,2)
+ar2: scala.collection.immutable.Range = Range(1, 3, 5, 7, 9, 11, 13)
+
+scala> ar2(0)
+res19: Int = 1
+
+scala> val ar2= Range(1,15,-2)
+ar2: scala.collection.immutable.Range = Range()
+
+scala> val ar2= Range(15,1,-2)
+ar2: scala.collection.immutable.Range = Range(15, 13, 11, 9, 7, 5, 3)
+
+scala> ar1(0)=10
+
+scala> ar1
+res21: Array[Int] = Array(10, 2, 3, 4, 68)
+
+scala> ar1.add(25)
+<console>:28: error: value add is not a member of Array[Int]
+       ar1.add(25)
+           ^
+
+scala> ar1+=25
+<console>:28: error: value += is not a member of Array[Int]
+       ar1+=25
+          ^
+
+scala> ar1.length
+res24: Int = 5
+
+scala> ar1.contains(1)
+res25: Boolean = false
+
+scala> ar1.contains(10)
+res26: Boolean = true
+
+scala> ar1.sorted
+res27: Array[Int] = Array(2, 3, 4, 10, 68)
+
+scala> ar1.sorted.take(3)
+res28: Array[Int] = Array(2, 3, 4)
+
+scala> ar1.sorted.take(3).foreach(println)
+2
+3
+4
+
+scala> if (arr22.isEmpty)
+     | {
+     | println("array is empty")
+     | }
+array is empty
+
+   * A list in Scala Collections is much like a Scala array. 
+   * Except that, List is immutable and represents a linked list. 
+   * An Array, on the other hand, is flat and mutable.
+
+scala> val lst=List(10,20,30,40)
+lst: List[Int] = List(10, 20, 30, 40)
+
+scala> val fruits=List("apples","banana","strawberry")
+fruits: List[String] = List(apples, banana, strawberry)
+
+scala> val g=fruits(0)
+g: String = apples
+
+scala> var list = List(1,8,5,6,9,58,23,15)
+list: List[Int] = List(1, 8, 5, 6, 9, 58, 23, 15)
+
+scala> var list11 = List(List(1,"a",100000),List(2,"b",200000))
+list11: List[List[Any]] = List(List(1, a, 100000), List(2, b, 200000))
+
+scala> list(2)
+res33: Int = 5
+
+scala> list11(0)
+res36: List[Any] = List(1, a, 100000)
+
+scala> val x=list(1)
+x: Int = 8
+
+scala> list(2)
+res39: Int = 5
+
+scala> list(2)=100
+<console>:26: error: value update is not a member of List[Int]
+       list(2)=100
+       ^
+      // Functions on List
+      //Merging 2 list
+
+scala> list
+res43: List[Int] = List(1, 8, 5, 6, 9, 58, 23, 15)
+
+scala> lst
+res44: List[Int] = List(10, 20, 30, 40)
+
+scala> var list3 = list ++ lst
+list3: List[Int] = List(1, 8, 5, 6, 9, 58, 23, 15, 10, 20, 30, 40)
+
+scala> var list3 = lst ++ list
+list3: List[Int] = List(10, 20, 30, 40, 1, 8, 5, 6, 9, 58, 23, 15)
+
+scala> var list4 = list ::: lst 
+list4: List[Int] = List(1, 8, 5, 6, 9, 58, 23, 15, 10, 20, 30, 40)
+
+scala> println(list.contains(2))
+false
+
+scala> println(list4.head)
+1
+
+scala> list4.tail.foreach(println)
+8
+5
+6
+9
+58
+23
+15
+10
+20
+30
+40
+
+scala> list4.tail
+res48: List[Int] = List(8, 5, 6, 9, 58, 23, 15, 10, 20, 30, 40)
+
+scala> println(list4.length)
+12
+
+scala> println(list4.isEmpty)
+false
+
+scala> list4.sorted
+res51: List[Int] = List(1, 5, 6, 8, 9, 10, 15, 20, 23, 30, 40, 58)
+
+scala> list4.reverse
+res52: List[Int] = List(40, 30, 20, 10, 15, 23, 58, 9, 6, 5, 8, 1)
+
+/* Tuples are immutable, contains fixed length of different type elements */
+
+scala> val emp=(101,"karthik",200.00)
+emp: (Int, String, Double) = (101,karthik,200.0)
+
+scala> val empid=emp._1
+empid: Int = 101
+
+scala> val empname=emp._2
+empname: String = karthik
+
+scala> val empsal=emp._3
+empsal: Double = 200.0
+
+scala> val empsal=emp._0
+<console>:25: error: value _0 is not a member of (Int, String, Double)
+       val empsal=emp._0
+                      ^
+scala> val emp1=(101,"karthik",200.00,("New Street","Chennai","TN"))
+emp1: (Int, String, Double, (String, String, String)) = (101,karthik,200.0,(New Street,Chennai,TN))
+
+scala> val empcity=emp1._4._2
+empcity: String = Chennai
+
+scala> val empstate=emp1._4._3
+empstate: String = TN
+
+   * A Map in Scala is a collection of key-value pairs, and is also called a hash table. 
+   * We can use a key to access a value. Keys are unique and values may be in common
+   * Map is by default immutable   	 
+
+//Create an empty map
+scala> var m1=map.empty[string,string]
+<console>:23: error: missing argument list for method map in object functions
+Unapplied methods are only converted to functions when a function type is expected.
+You can make this conversion explicit by writing `map _` or `map(_)` instead of `map`.
+       var m1=map.empty[string,string]
+              ^
+<console>:23: error: not found: type string
+       var m1=map.empty[string,string]
+                        ^
+<console>:23: error: not found: type string
+       var m1=map.empty[string,string]
+                               ^
+
+scala> var m1=Map.empty[String,String]
+m1: scala.collection.immutable.Map[String,String] = Map()
+
+//Immutable map, doesn't allow to modify but allows to add or remove by recreating
+//Add multiple Map elements  
+
+scala> var immutablemap = scala.collection.immutable.Map(1->"Apple",2->"Orange")
+immutablemap: scala.collection.immutable.Map[Int,String] = Map(1 -> Apple, 2 -> Orange)
+
+scala> immutablemap(1)
+res0: String = Apple
+
+scala> immutablemap(2)
+res1: String = Orange
+
+scala> immutablemap -= (2)
+
+scala> immutablemap
+res3: scala.collection.immutable.Map[Int,String] = Map(1 -> Apple)
+
+scala> immutablemap += (3->"Grapes")
+
+scala> immutablemap
+res7: scala.collection.immutable.Map[Int,String] = Map(1 -> Apple, 3 -> Grapes)
+
+//Below update is not possible
+
+scala> immutablemap(1)="Alto k10"
+<console>:26: error: value update is not a member of scala.collection.immutable.Map[Int,String]
+       immutablemap(1)="Alto k10"
+
+scala> var mutablemap = scala.collection.mutable.Map(1 -> "Alto",2 -> "Swift")
+mutablemap: scala.collection.mutable.Map[Int,String] = Map(2 -> Swift, 1 -> Alto)
+
+//Below update is possible
+
+scala> mutablemap(1)="Alto k10"
+
+scala> mutablemap(1)
+res10: String = Alto k10
+
+scala> mutablemap=mutablemap +(3->"Verna")
+mutablemap: scala.collection.mutable.Map[Int,String] = Map(2 -> Swift, 1 -> Alto k10, 3 -> Verna)
+
+scala> mutablemap=mutablemap - 2
+mutablemap: scala.collection.mutable.Map[Int,String] = Map(1 -> Alto k10, 3 -> Verna)
+
+// Functions on Map
+
+scala> mutablemap.keys
+res11: Iterable[Int] = Set(1, 3)
+
+scala> mutablemap.values
+res12: Iterable[String] = HashMap(Alto k10, Verna)
+
+scala> mutablemap.isEmpty
+res13: Boolean = false
+
+scala> val lst1 = mutablemap.toList
+lst1: List[(Int, String)] = List((1,Alto k10), (3,Verna))
+
+scala> val arr = mutablemap.toArray
+arr: Array[(Int, String)] = Array((1,Alto k10), (3,Verna))
+
+scala> lst1(0)
+res14: (Int, String) = (1,Alto k10)
+
+scala> lst1(1)
+res16: (Int, String) = (3,Verna)
+
+scala> lst1(1)._1
+res17: Int = 3
+
+scala> lst1(1)._2
+res18: String = Verna
+
+scala> lst1(0)._1
+res19: Int = 1
+
+scala> lst1(0)._2
+res20: String = Alto k10
+
+scala> arr(0)
+res21: (Int, String) = (1,Alto k10)
+
+scala> arr(1)
+res22: (Int, String) = (3,Verna)
+
+scala> arr(0)._1
+res23: Int = 1
+
+scala> arr(0)._2
+res24: String = Alto k10
+
+scala> arr(1)._1
+res25: Int = 3
+
+scala> arr(1)._2
+res26: String = Verna
+
+scala> arr(1)._0
+<console>:28: error: value _0 is not a member of (Int, String)
+       arr(1)._0
+              ^
+ /* A Scala Set is a collection that won’t take duplicates.
+  * By default, Scala uses immutable sets.   	 
+ */
+
+scala> var games = scala.collection.immutable.Set("Cricket","Football","Hockey","Golf","Cricket","Football")
+games: scala.collection.immutable.Set[String] = Set(Cricket, Football, Hockey, Golf)
+
+//Either mutable or immutable, I can Resize - add/remove (insert/delete) if its of type var
+
+scala> games += "Tennis"
+
+scala> games
+res31: scala.collection.immutable.Set[String] = Set(Football, Golf, Hockey, Tennis, Cricket)
+
+scala> games -= "Cricket"
+
+scala> games
+res33: scala.collection.immutable.Set[String] = Set(Football, Golf, Hockey, Tennis)
+
+scala> games = games + "Badminton"
+games: scala.collection.immutable.Set[String] = Set(Football, Golf, Hockey, Badminton, Tennis)
+
+scala> games = games - "Golf"
+games: scala.collection.immutable.Set[String] = Set(Football, Hockey, Badminton, Tennis)
+
+scala> games + "Vooleyball"
+res35: scala.collection.immutable.Set[String] = Set(Football, Hockey, Vooleyball, Badminton, Tennis)
+
+scala> games
+res36: scala.collection.immutable.Set[String] = Set(Football, Hockey, Badminton, Tennis)
+
+scala> val games = scala.collection.immutable.Set("Cricket","Football","Hockey","Golf","Cricket","Football")
+games: scala.collection.immutable.Set[String] = Set(Cricket, Football, Hockey, Golf)
+
+scala> games = games - "Golf"
+<console>:25: error: reassignment to val
+       games = games - "Golf"
+             ^
+
+//Due to Immutable, I am NOT able to modify/update
+
+scala> games.update("Golf",true)
+<console>:26: error: value update is not a member of scala.collection.immutable.Set[String]
+       games.update("Golf",true)
+             ^
+//Due to mutable, I am able to update and add then
+
+scala> var mutablegames = scala.collection.mutable.Set("Cricket","VollyBall","BaseBall","Hockey")
+mutablegames: scala.collection.mutable.Set[String] = Set(Cricket, BaseBall, Hockey, VollyBall)
+
+scala> mutablegames.update("Cricket",true)
+
+scala> mutablegames
+res39: scala.collection.mutable.Set[String] = Set(Cricket, BaseBall, Hockey, VollyBall)
+
+scala> mutablegames.add("BaseBall")
+res40: Boolean = false
+
+scala> mutablegames
+res41: scala.collection.mutable.Set[String] = Set(Cricket, BaseBall, Hockey, VollyBall)
+
+scala> mutablegames.add("Hocky")
+res42: Boolean = true
+
+scala> mutablegames
+res43: scala.collection.mutable.Set[String] = Set(Cricket, Hocky, BaseBall, Hockey, VollyBall)
+
+scala> mutablegames.remove("Hocky")
+res44: Boolean = true
+
+scala> mutablegames
+res45: scala.collection.mutable.Set[String] = Set(Cricket, BaseBall, Hockey, VollyBall)
+
+//Functions on Set
+
+scala> games.head
+res46: String = Cricket
+
+scala> games.tail
+res47: scala.collection.immutable.Set[String] = Set(Football, Hockey, Golf)
+
+scala> games.isEmpty
+res48: Boolean = false
+
+scala> games.max
+res49: String = Hockey
+
+scala> games.min
+res50: String = Cricket
+
+scala> games.contains("Golf")
+res51: Boolean = true
+
+scala> games ++ mutablegames
+res52: scala.collection.immutable.Set[String] = Set(Football, Golf, Hockey, VollyBall, BaseBall, Cricket)
+
+scala> games.intersect(mutablegames)
+res53: scala.collection.immutable.Set[String] = Set(Cricket, Hockey)
+
+scala> games.union(mutablegames)
+res54: scala.collection.immutable.Set[String] = Set(Football, Golf, Hockey, VollyBall, BaseBall, Cricket)
+
+scala> games.diff(mutablegames)
+res55: scala.collection.immutable.Set[String] = Set(Football, Golf)
+
+
+

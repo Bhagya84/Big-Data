@@ -1,0 +1,220 @@
+scala> val bonus:Int=1000
+bonus: Int = 1000
+
+scala> var salary:Int=20000
+salary: Int = 20000
+
+scala> salary=bonus+1000
+salary: Int = 2000
+
+scala> bonus=2000
+<console>:25: error: reassignment to val
+       bonus=2000
+            ^
+
+//******DataType - valuetype**************/
+scala> val num0:Byte=100
+num0: Byte = 100
+
+scala> println(num0)
+100
+
+scala> val num1:Short=10
+num1: Short = 10
+
+scala> val num2:Int=500
+num2: Int = 500
+
+scala> val num3:Long=500
+num3: Long = 500
+
+scala> val num4:Double=500
+num4: Double = 500.0
+
+scala> val num5:Float=500.25f
+num5: Float = 500.25
+
+scala> val blnstr:Boolean=true
+blnstr: Boolean = true
+
+scala> val blnstr:Boolean=hi
+<console>:23: error: not found: value hi
+       val blnstr:Boolean=hi
+                          ^
+
+scala> val blnstr:Boolean=false
+blnstr: Boolean = false
+
+scala> var cstr:Char='A'
+cstr: Char = A
+
+scala> val cstr:Char='A'
+cstr: Char = A
+
+scala> cstr='AA'
+<console>:1: error: unclosed character literal
+cstr='AA'
+        ^
+
+scala> cstr='B'
+<console>:25: error: reassignment to val
+       cstr='B'
+           ^
+scala> var unk:String=null
+unk: String = null
+
+scala> println(unk)
+null
+
+scala> var unk:String=_
+unk: String = null
+
+scala> println(unk)
+null
+
+scala> unk="hi"
+unk: String = hi
+
+scala> println(unk)
+hi
+
+scala> val unk1:String=null
+unk1: String = null
+
+scala> val unk1:String=_
+<console>:23: error: unbound placeholder parameter
+       val unk1:String=_
+                       ^
+
+scala> unk1="hi"
+<console>:25: error: reassignment to val
+       unk1="hi"
+           ^
+scala> val str:Unit=()
+str: Unit = ()
+
+scala> str="hi"
+<console>:25: error: reassignment to val
+       str="hi"
+          ^
+
+scala> var str:Unit=()
+str: Unit = ()
+
+scala> str="hi"
+<console>:25: warning: a pure expression does nothing in statement position; you may be omitting necessary parentheses
+       str="hi"
+           ^
+str: Unit = ()
+
+scala> val av1:AnyVal=2
+av1: AnyVal = 2
+
+scala> val av2:AnyVal=2.5
+av2: AnyVal = 2.5
+
+scala> val av3:AnyVal='D'
+av3: AnyVal = D
+
+scala> val av4:AnyVal="hi"
+<console>:23: error: the result type of an implicit conversion must be more specific than AnyVal
+       val av4:AnyVal="hi"
+                      ^
+
+scala> val av4:AnyVal=()
+av4: AnyVal = ()
+
+scala> av4='D'
+<console>:25: error: reassignment to val
+       av4='D'
+          ^
+
+scala> av1=3
+<console>:25: error: reassignment to val
+       av1=3
+          ^
+scala> var av1:AnyVal=2
+av1: AnyVal = 2
+
+scala> av1=2.5
+av1: AnyVal = 2.5
+
+scala> av1='D'
+av1: AnyVal = D
+
+scala> av1="hi"
+<console>:25: error: the result type of an implicit conversion must be more specific than AnyVal
+       av1="hi"
+           ^
+
+scala> av1=()
+av1: AnyVal = ()
+
+/******DataTypes - Reference type**************/
+scala> val str2:AnyRef="hello"
+str2: AnyRef = hello
+
+scala> val str22:AnyVal=15
+str22: AnyVal = 15
+
+/******DataTypes - Any type**************/
+//Any: Super type of any value or reference type
+
+scala> val atype1:Any="hi"
+atype1: Any = hi
+
+scala> val atype2:Any=3
+atype2: Any = 3
+
+scala> val atype3:Any=2.5
+atype3: Any = 2.5
+
+scala> val atype4:Any='E'
+atype4: Any = E
+
+scala> val atype5:Any=_
+<console>:23: error: unbound placeholder parameter
+       val atype5:Any=_
+                      ^
+
+scala> val atype5:Any=null
+atype5: Any = null
+
+/*Type Inference - compiler can infer the datatype based on the assignment 
+Dynamic Type Inference
+
+scala> val a=10
+a: Int = 10
+
+scala> var b=5.2
+b: Double = 5.2
+
+scala> var c='D'
+c: Char = D
+
+scala> val D="hi"
+D: String = hi
+
+scala> val E=null
+E: Null = null
+
+//statically typed -  each variable and expression is already known at compile time 
+//cannot assign different datatype once the value is assigned
+
+scala> var name="bhagya"
+name: String = bhagya
+
+scala> name="bhagyalakshmi j"
+name: String = bhagyalakshmi j
+
+scala> println(name)
+bhagyalakshmi j
+
+scala> name=25
+<console>:25: error: type mismatch;
+ found   : Int(25)
+ required: String
+       name=25
+            ^
+
+
