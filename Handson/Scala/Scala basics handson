@@ -12,7 +12,7 @@ scala> bonus=2000
        bonus=2000
             ^
 
-//******DataType - valuetype**************/
+//******DataType - valuetype**********/
 scala> val num0:Byte=100
 num0: Byte = 100
 
